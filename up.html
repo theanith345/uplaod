@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-black flex gap-10 justify-center items-center w-full h-screen">
+
+    <!-- Preview Image -->
+    <img
+        id="previewFile"
+        src="https://i.pinimg.com/736x/f1/a5/64/f1a5640fe39cb3e00ec09929ad9a8ac5.jpg"
+        class="rounded-2xl w-[500px] h-[500px] border-2 border-white object-cover"
+        alt="Preview"
+    >
+
+    <!-- Upload Card -->
+    <div class="flex bg-white rounded-2xl p-10 h-[500px] flex-col gap-3 w-[500px]">
+
+        <label for="file"
+            class="w-full flex justify-center items-center flex-col cursor-pointer h-[80%]
+                   bg-blue-100 rounded-3xl border-2 border-dashed">
+
+            <div class="bg-gray-700 text-white rounded-2xl p-5">
+                <i data-lucide="upload"></i>
+            </div>
+
+            <p class="text-2xl p-5 font-bold">Upload your image</p>
+        </label>
+
+        <input type="file" id="file" class="hidden" accept="image/*">
+
+        <button
+            type="button"
+            id="btnUpload"
+            class="text-xl h-[20%] cursor-pointer font-bold border-2 border-black
+                   rounded-xl bg-transparent hover:bg-black w-full duration-300 hover:text-white">
+            Preview
+        </button>
+         <!-- Laoding -->
+     <div id="loading" class="w-full hidden justify-center items-center absolute h-full">
+          <div class="overlay w-full h-full bg-black/70 "></div>
+          <span class="laoding absolute z-3 leading-spinner bg-white text-2xl loading-xl"></span>
+     </div>
+
+    </div>
+
+</body>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="/preview.js"></script>
+<script>
+    lucide.createIcons();
+</script>
+</html>
