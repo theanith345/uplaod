@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="h-screen flex justify-center items-center overflow-hidden">
+    <div class="overlay bg-black/70 z-3 top-0 w-full absolute h-full"> </div>
+    <video src=""class="w-full h-full object-cover" controls muted loop autoplay ></video>
+    <form class="w-[500px] overflow-hidden z-[100] absolute bg-white rounded-2xl">
+        <div class="border-b border-black px-7 pt-5 bg-blue-300">
+            <h1 class="text-2xl text-center bfont-bold">Login</h1>
+            <p class="text-center text-[15px] pb-3">Welcome to System</p>
+
+        </div>
+        <div class="p-7" w-full>
+            <div class="flex flex-col w-full gap-3">
+                <label for="Email:"></label>
+                <input type="text" placeholder="Email:" class="input w-full">
+
+            </div>
+            <div class="flex flex-col  gap-3 mb-10">
+                <label for="Password:"></label>
+                <div class="relative">
+                <input type="password" placeholder="Password:" class="input w-full">
+                <button class="absolute cursor-pointer right-5 top-2 " type="button"><i data-lucide="eye"></i></button>
+                </div>
+</div>
+<button class="w-full btn btn-primary  bg-blue-700 rounded-2xl " type="submit">Login</button>
+        </div>
+    </form>
+    
+</body>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+</html>
